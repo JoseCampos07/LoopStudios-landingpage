@@ -1,0 +1,53 @@
+---
+import CreationCard from "./CreationCard.astro"
+const creations = [
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-deep-earth.jpg",
+        title: "DEEP EARTH"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-night-arcade.jpg",
+        title: "NIGHT ARCADE"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-soccer-team.jpg",
+        title: "SOCCER TEAM VR"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-grid.jpg",
+        title: "THE GRID"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-from-above.jpg",
+        title: "FROM UP ABOVE VR"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-pocket-borealis.jpg",
+        title: "POCKET BOREALIS"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-curiosity.jpg",
+        title: "THE CURIOSITY"
+    },
+    {
+        image: "/LoopStudios-landingpage/images/desktop/image-fisheye.jpg",
+        title: "MAKE IT FISHEYE"
+    }
+];
+---
+
+<section class="px-30 py-20">
+    <div class="flex justify-between">
+        <h1 class="text-5xl font-light mb-10">OUR CREATIONS</h1>
+        <a href="#" class="h-fit text-sm font-semibold tracking-[2pt] border-2 border-gray-400 px-9 py-2">
+            SEE ALL
+        </a>
+    </div>
+    <div class="grid grid-cols-4 gap-10">
+        {
+            creations.map(
+                (creation) => <CreationCard image={ creation.image } title={ creation.title } />
+            )
+        }
+    </div>
+</section>
