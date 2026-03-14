@@ -2,44 +2,53 @@
 import CreationCard from "./CreationCard.astro"
 const creations = [
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-deep-earth.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-deep-earth.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-deep-earth.jpg",
         title: "DEEP EARTH"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-night-arcade.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-night-arcade.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-night-arcade.jpg",
         title: "NIGHT ARCADE"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-soccer-team.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-soccer-team.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-soccer-team.jpg",
         title: "SOCCER TEAM VR"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-grid.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-grid.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-grid.jpg",
         title: "THE GRID"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-from-above.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-from-above.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-from-above.jpg",
         title: "FROM UP ABOVE VR"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-pocket-borealis.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-pocket-borealis.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-pocket-borealis.jpg",
         title: "POCKET BOREALIS"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-curiosity.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-curiosity.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-curiosity.jpg",
         title: "THE CURIOSITY"
     },
     {
-        image: "/LoopStudios-landingpage/images/desktop/image-fisheye.jpg",
+        image_desktop: "/LoopStudios-landingpage/images/desktop/image-fisheye.jpg",
+        image_mobile: "/LoopStudios-landingpage/images/mobile/image-fisheye.jpg",
         title: "MAKE IT FISHEYE"
     }
 ];
 ---
 
-<section class="px-30 py-20">
-    <div class="flex justify-between">
+<section class="py-20 md:px-30">
+    <div class="flex w-160 justify-center md:w-full md:justify-between">
         <h1 class="text-5xl font-light mb-10">OUR CREATIONS</h1>
         <a href="#" class="
+            hidden 
             h-fit 
             text-sm 
             font-semibold 
@@ -54,15 +63,37 @@ const creations = [
             hover:border-black
             hover:text-white
             hover:transition
+            md:block
         ">
             SEE ALL
         </a>
     </div>
-    <div class="grid grid-cols-4 gap-10">
+    <div class="flex flex-col mb-10 px-10 gap-10 md:grid md:grid-cols-4 md:px-0">
         {
             creations.map(
-                (creation) => <CreationCard image={ creation.image } title={ creation.title } />
+                (creation) => <CreationCard image_desktop={ creation.image_desktop } image_mobile={ creation.image_mobile } title={ creation.title } />
             )
         }
+    </div>
+    <div class="flex justify-center w-160">
+        <a href="#" class="
+            h-fit 
+            text-lg 
+            font-semibold 
+            tracking-[2pt] 
+            border-2 
+            border-gray-400 
+            px-9 py-2 
+            duration-300
+            transition
+            ease-in-out
+            hover:bg-black
+            hover:border-black
+            hover:text-white
+            hover:transition
+            md:hidden
+        ">
+            SEE ALL
+        </a>
     </div>
 </section>
