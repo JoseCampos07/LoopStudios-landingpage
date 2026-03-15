@@ -9,7 +9,7 @@ El objetivo es aplicar los conocimientos sobre **componentes de Astro**, **maque
 
 ### 🧩 Vista previa del proyecto
 
-![Vista previa del proyecto](./screenshot.jpg)
+![Vista previa del proyecto](./screenshot.png)
 
 ---
 
